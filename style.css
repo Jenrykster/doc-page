@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Rubik:ital,wght@0,400;0,700;1,400&display=swap');
+body{
+  display:flex;
+  margin:0px;
+  font-family: 'Rubik', sans-serif;
+  --background: #2D142C;
+  --main: #FCBB6D;
+}
+code{
+  font-family: 'Fira Code', monospace;
+}
+.list-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.list h3{
+  text-align:center;
+}
+#navbar{
+  border: 1px solid black;
+  min-width: 200px; 
+  height:100vh;
+  overflow: auto;
+  position: sticky;
+  top: 0;
+}
+#navbar header{
+  text-align:center;
+  position: sticky;
+  top:0;
+  background-color:white;
+  padding-top:10px;
+  padding-bottom:0px;
+  font-weight: 600;
+}
+.nav-link{
+  text-decoration: none;
+  color: #505050;
+  font-size: 0.9em;
+  margin-left: 15px
+}
+li{
+  border: 1px solid;
+  border-width: 1px 0px 1px 0px;
+  padding: 10px;
+}
+a{
+  color:inherit;
+}
+
+a:focus{
+  outline:dashed  2px;
+}
+ul{
+  list-style-type: none;
+  padding-left: 25px;
+  margin-top:0px;
+  padding: 10px 0px 0px 0px;
+  margin-bottom:0px;
+}
+#navbar a{
+  margin:0px;
+}
+#navbar li:hover{
+  background-color:#eeeeee;
+}
+main{
+  background-color: var(--background);
+  color: var(--main);
+}
+.main-section {
+  margin: 40px;
+  font-weight: 50;
+}
+
+.main-section header{
+  font-weight: 600;
+  font-size:1.3em
+}
+.main-section code{
+  background-color: #510A32;
+  padding:10px;
+  line-height:35px;
+}
+
+.center{
+  text-align: center;
+}
+
+@media(max-width: 850px){
+  .list-container{
+    flex-direction:column;
+  }
+}
+
+@media(max-width: 700px){
+  body{
+    flex-direction: column;
+    overflow-x:hidden;
+  }
+  ul{
+    text-align:center
+  }
+  #navbar{
+    position:relative;
+    height:100%;
+    width:100%;
+    
+  }
+  .list-container{
+    flex-direction:column;
+  }
+ 
+}
+
+@media(max-width: 400px){
+  .main-section header{
+    font-size: 1.1em;
+  }
+}
